@@ -6,7 +6,7 @@ const {createProxyMiddleware} = require("http-proxy-middleware");
 
 // Proxy: de /api hacia tu servidor HTTP
 app.use("/", createProxyMiddleware({
-  target: "http://181.30.35.22:6379", // tu backend HTTP
+  target: "http://181.30.35.22:6379",
   changeOrigin: true,
 }));
 
