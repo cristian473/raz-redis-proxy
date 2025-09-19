@@ -26,7 +26,3 @@ EXPOSE 8080
 
 # Define the command to run the application
 CMD ["node", "app.js"]
-
-# Add health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:8080/', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"
